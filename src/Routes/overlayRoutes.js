@@ -30,7 +30,8 @@ overlayRouter.use((req,res,next)=>{
 overlayRouter.route('/text')
   .post(overlayController.translateText)
   .get((res,rep, next)=>{
-    console.log('ok')
+    res.locals.status = 200
+    res.locals.message = 'ok'
     next()
   })
 

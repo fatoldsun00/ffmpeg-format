@@ -50,3 +50,5 @@ process.on('SIGINT', async function() {
 	  process.exit();
 	}
   });
+
+  module.exports = app
