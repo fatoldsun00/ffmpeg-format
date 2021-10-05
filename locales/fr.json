@@ -1,63 +1,6 @@
 {
-	"ERR_UNKNOW": "Erreur inconnue",
-	"ERR_ID_MALFORMED": "L'id fournit n'est pas un ObjectId valid",
-
-	"ERR_NOTIFICATION_GENERIC": "Erreur d'envoie de la notification",
-	"ERR_NOTIFICATION_MALFORMED": "La notification est malformé",
-	"ERR_NOTIFICATION_NOT_EXIST": "La notification n'existe pas",
-
-
-	"ERR_GENERIC_FORBIDDEN": "Acces interdit",
-	"ERR_POST_FORBIDDEN": "Ajout interdit",
-	"ERR_PUT_FORBIDDEN": "Modification interdite",
-	"ERR_DEL_FORBIDDEN": "Suppression interdit",
-	"ERR_METHOD_UNKNOW": "Methode non prise en chrge par les ACL",
-
-	"ERR_AUTH_REGISTER_DUPLICATE": "Il existe déjà un compte utilisateur pour cette adresse mail",
-	"ERR_AUTH_LOGIN_CREDENTIALS": "Vos identifiants de connexion sont incorrects",
-	"ERR_AUTH_LOGIN_ACTIVE": "Votre compte n'a pas été activé",
-	"ERR_AUTH_LOGIN_ROLE": "Aucune permissions ne vous a été accordées",
-	"ERR_AUTH_ACTIVE_DELAY": "Le délai imparti pour l'activation de votre compte est écoulé",
-	"ERR_AUTH_ACTIVE_CREDENTIALS": "Vos identifiants d'activation sont incorrects",
-	"ERR_AUTH_TOKEN": "Le jeton d'authentification est incorrect",
-	"ERR_AUTH_TOKEN_LOGIN": "Vous n'êtes pas connecté! Merci de vous connecter pour accéder à l'application",
-	"ERR_AUTH_TOKEN_USER_NOT_EXIST": "L'utilisateur appartenant au token n'existe plus",
-	"ERR_AUTH_TOKEN_USER_PASSWORD": "Vous avez récemment changé votre mot de passe! Merci de vous reconecter.",
-	"ERR_AUTH_RESET_PASSWORD_DELAY": "Le délai imparti pour le changement de votre mot de passe est écoulé",
-	"ERR_AUTH_RESET_PASSWORD_MISMATCH": "Les mots de passe sont différents",
-	"ERR_AUTH_FORGOT_PASSWORD_EMAIL": "Votre adresse mail est manquante",
-	"ERR_AUTH_ABILITY": "Une erreur est survenue lors de la recuperation de vos droits",
-	"ERR_AUTH_NOT_LOGGED": "Vous n'êtes pas identifiez",
-
-	"ERR_MODEL_USER_EMAIL_REQUIRED": "L'adresse mail est requis",
-	"ERR_MODEL_USER_EMAIL_VALID": "Merci d'indiquer une adresse mail valide",
-	"ERR_MODEL_USER_PASSWORD_REQUIRED": "Le mot de passe est requis",
-	"ERR_MODEL_USER_NAME_REQUIRED": "Le nom est requis",
-	"ERR_MODEL_USER_FIRSTNAME_REQUIRED": "Le prénom est requis",
-
-	"ERR_ROUTE_UNKNOW": "La route n'est pas connue",
-
-	"ERR_USER_ALREADY_EXIST": "Un utilisateur portant le même nom existe déjà",
-	"ERR_USER_NOT_EXIST": "Utilisateur inexistant",
-	"ERR_USER_NAME_EMPTY": "Vous devez saisir le nom de l'utilisateur",
-	"ERR_USER_FIRSTNAME_EMPTY": "Vous devez saisir le prénom de l'utilisateur",
-
-	"ERR_GROUPABILITY_ALREADY_EXIST": "Groupe de permissions déjà existant",
-	"ERR_GROUPABILITY_NOT_EXIST": "Groupe de permissions inexistant",
-
-
-	"ERR_USER_GROUPABILITY_NOT_FOUND": "Ce groupe de permissions n'est pas associé à cet utilisateur",
-	"ERR_USER_GROUPABILITY_ALREADY_EXIST": "Ce groupe de permissions est déjà ajouté à cet utilisateur",
-	
-	"ERR_GROUPABILITY_ABILITY_ALREADY_EXIST":"Permission déjà attaché à ce groupe",
-	"ERR_GROUPABILITY_HAS_USER": "Ce groupe de permissions à des utilisateurs attachés",
-
-	"ERR_ABILITY_NOT_EXIST": "Permission inexistant",
-	"ERR_ABILITY_ALREADY_EXIST": "Une permission portant le même nom existe déjà",
-
-	"ERR_CUSTOMER_ALREADY_EXIST": "Client déjà existant",
-	"ERR_CUSTOMER_NOT_EXIST": "Client inexistant",
-
-	"ERR_ORDER_ALREADY_EXIST": "Commande déjà existant",
-	"ERR_ORDER_NOT_EXIST": "Commande inexistante"
+	"ERR_TEXT_REQUIRED": "la parametre Text est requis",
+	"ERR_RESOLUTION_REQUIRED": "la parametre Résolution est requis",
+	"ERR_TEXT_OUTSIDE_RESOLUTION": "la position du text (x,y) est en dehors de la résolution",
+	"ERR_TIME_OUTSIDE_DURATION": "Le début et la fin de l'affichage doivent être compris dans la durée",
 }

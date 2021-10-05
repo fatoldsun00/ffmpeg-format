@@ -9,6 +9,8 @@ i18n.configure({
   updateFiles: false
 })
 
+console.log( path.join( __dirname, '../../locales' ));
+
 i18n.setLocale( 'fr' )
 
 module.exports = i18n
