@@ -4,7 +4,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 const multer = require('multer');
 const formDataReader = multer();
-const { sLogConsoleError, sDebugError, sendResError } = require('./src/Services/errorHandler')
+const {  sDebugError, sendResError } = require('./src/Services/errorHandler')
 const { mode, corsAllowURL } = require('./src/config');
 const port = process.env.PORT || 8000;
 
@@ -32,7 +32,6 @@ app.listen(port,'127.0.0.1', (err) => {
 
 //Gestionnaire d'erreur
 app.use(sDebugError)
-//if (mode == 'dev') app.use(sLogConsoleError)
 
 //Error send
 app.use(sendResError)
