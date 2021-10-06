@@ -4,13 +4,8 @@ const overlayController = require('../Controllers/overlayController')
 const AppError = require('../Services/AppError')
 
 overlayRouter.use((req,res,next)=>{
-  //check input data and forward an error
-  const { text, duration, resolution, X,Y, startTime, endTime } = req.body
-  //required value
-  if (!text){
-    next(new AppError(400, 'ERR_TEXT_REQUIRED'))
-    return
-  }
+  const { duration, resolution } = req.body
+  //required value for all overlay routes
   if (!resolution){
     next(new AppError(400, 'ERR_RESOLUTION_REQUIRED'))
     return
@@ -19,6 +14,17 @@ overlayRouter.use((req,res,next)=>{
     next(new AppError(400, 'ERR_DURATION_REQUIRED'))
     return
   }
+  
+  //init default Value
+  const defaultValue = {
+    X: 0,
+    Y: 0,
+    startTime: 0,
+    endTime: parseFloat(duration),
+  }
+  req.body = {...defaultValue, ...req.body}
+
+  const {X,Y, startTime, endTime } = req.body
 
   //X,Y inside resolution
   const [resolutionX, resolutionY] = resolution.toUpperCase().split("X")
@@ -35,12 +41,8 @@ overlayRouter.use((req,res,next)=>{
   }
   next()
 })
+
 overlayRouter.route('/text')
   .post(overlayController.translateText)
-  .get((res,rep, next)=>{
-    res.locals.status = 200
-    res.locals.message = 'ok'
-    next()
-  })
 
 module.exports = overlayRouter;

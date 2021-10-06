@@ -1,15 +1,18 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
+const multer = require('multer');
+const formDataReader = multer();
 const { sLogConsoleError, sDebugError, sendResError } = require('./src/Services/errorHandler')
 const { mode, corsAllowURL } = require('./src/config');
 const port = process.env.PORT || 8000;
 
+
+app.use(express.urlencoded({ extended: true })); 
+app.use(formDataReader.array()); 
 app.use(morgan('combined'));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+
 app.use(cors({
 	credentials: true,
   	origin: corsAllowURL,
@@ -20,6 +23,7 @@ app.use(cors({
 
 //Front routes
 app.use('/api',require( './src/Routes/index' ))
+app.use('/demo', require( './src/Routes/demo' ))
 
 app.listen(port,'127.0.0.1', (err) => {
 	console.log( `Running on PORT: ${port}` );
