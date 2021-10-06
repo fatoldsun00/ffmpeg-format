@@ -15,8 +15,7 @@ const sFrontError = ( err, req, res, next ) => {
 		status: err.statusCode==undefined?418:err.statusCode,
 		message: { 
 			code: err.errorCode, 
-			errmsg: err.message,
-			from:'front' } 
+			errmsg: err.message} 
 	})
 
 	next(err)

@@ -5,7 +5,7 @@ const AppError = require('../Services/AppError')
 
 overlayRouter.use((req,res,next)=>{
   //check input data and forward an error
-  const { text, inputPath, duration, resolution, outputPath,x,y, fontSize, fontColor, startTime, endTime } = req.body
+  const { text, duration, resolution, X,Y, startTime, endTime } = req.body
   //required value
   if (!text){
     next(new AppError(400, 'ERR_TEXT_REQUIRED'))
@@ -19,22 +19,19 @@ overlayRouter.use((req,res,next)=>{
     next(new AppError(400, 'ERR_DURATION_REQUIRED'))
     return
   }
-  if (!startTime || !endTime){
-    next(new AppError(400, 'ERR_TIME_OUTSIDE_DURATION'))
-    return
-  }
 
-  //x,y inside resolution
-  const [resolutionX, resolutionY] = resolution.split("x")
-  if (x > parseFloat(resolutionX) || y > parseFloat(resolutionY)){
+  //X,Y inside resolution
+  const [resolutionX, resolutionY] = resolution.toUpperCase().split("X")
+  if ((X && X > parseFloat(resolutionX)) || (Y && Y > parseFloat(resolutionY))){
     next(new AppError(400, 'ERR_TEXT_OUTSIDE_RESOLUTION'))
     return
   }
+
   //display time into duration
-  if (parseFloat(startTime) > parseFloat(duration) || parseFloat(endTime) > parseFloat(duration)
-      || parseFloat(startTime) < 0 || parseFloat(duration) < 0){
-    next(new AppError(400, 'ERR_TIME_OUTSIDE_DURATION'))
-    return
+  if ((startTime && (parseFloat(startTime) < 0 || parseFloat(startTime) > parseFloat(duration))) ||
+      (endTime  && (parseFloat(endTime) < 0 || parseFloat(endTime) > parseFloat(duration)))){
+        next(new AppError(400, 'ERR_TIME_OUTSIDE_DURATION'))
+        return
   }
   next()
 })
