@@ -9,13 +9,13 @@ describe('Unit testing overlay route', function() {
   before(function(done) {
     done()
   });
-  it('should return OK status', function() {
-    return request(app)
-      .get('/api/overlay/text')
-      .then(function(response){
-        console.log("ididididididdeidi");
-          assert.equal(response.status, 200)
-      })
+  it('should return OK status', async function() {
+    try {
+      const response = await request(app).get('/api/overlay/text')
+      assert.equal(response.status, 200)
+    } catch (error) {
+      throw error
+    }
   });
 
   /*it('should return message on rendering', function() {

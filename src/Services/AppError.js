@@ -7,7 +7,6 @@ class AppError extends Error {
     if (errStack != undefined) err.stack = errStack
     
     Error.captureStackTrace(this, this.constructor);
-    console.log(message,i18n.__('ERR_TIME_OUTSIDE_DURATION'));
   }
 }
 

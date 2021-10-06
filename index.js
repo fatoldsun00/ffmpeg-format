@@ -21,15 +21,14 @@ app.use(cors({
 //Front routes
 app.use('/api',require( './src/Routes/index' ))
 
-app.listen(port,'localhost', () => {
+app.listen(port,'127.0.0.1', (err) => {
 	console.log( `Running on PORT: ${port}` );
-	//console.log( i18n.__( "MSG_LOG_PORT: %s", port ) );
 	console.log( `Mode: ${mode}` );
 });
 
 //Gestionnaire d'erreur
 app.use(sDebugError)
-if (mode == 'dev') app.use(sLogConsoleError)
+//if (mode == 'dev') app.use(sLogConsoleError)
 
 //Error send
 app.use(sendResError)
