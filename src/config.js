@@ -1,7 +1,7 @@
-const dotenv = require( 'dotenv' )
-dotenv.config()
- 
+const dotenv = require("dotenv");
+dotenv.config();
+
 module.exports = {
-  mode: process.env.NODE_ENV,
-  corsAllowURL: process.env.CORSALLOWURL,
-}
+    mode: process.env.NODE_ENV,
+    corsAllowURL: process.env.CORSALLOWURL,
+};
