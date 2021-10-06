@@ -1,7 +1,8 @@
 {
-	"ERR_TEXT_REQUIRED": "la parametre 'text' est requis",
-	"ERR_RESOLUTION_REQUIRED": "le parametre 'resolution' est requis",
-	"ERR_DURATION_REQUIRED": "le parametre 'duration' est requis",
-	"ERR_TEXT_OUTSIDE_RESOLUTION": "le position du text (x,y) est en dehors de la résolution",
-	"ERR_TIME_OUTSIDE_DURATION": "Le début et la fin de l'affichage doivent être compris dans la durée"
+    "ERR_TEXT_REQUIRED": "la parametre 'text' est requis",
+    "ERR_INPUTPATH_REQUIRED": "la parametre 'inputPath' est requis",
+    "ERR_RESOLUTION_REQUIRED": "le parametre 'resolution' est requis",
+    "ERR_DURATION_REQUIRED": "le parametre 'duration' est requis",
+    "ERR_TEXT_OUTSIDE_RESOLUTION": "le position du text (x,y) est en dehors de la résolution",
+    "ERR_TIME_OUTSIDE_DURATION": "Le début et la fin de l'affichage doivent être compris dans la durée"
 }

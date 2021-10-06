@@ -1,11 +1,10 @@
-const app = require('express')
-const demoRouter = app.Router()
+const app = require("express");
+const demoRouter = app.Router();
 
 //Montage des routes
-demoRouter.route('/')
-  .get((req, res, next) => {
+demoRouter.route("/").get((req, res, next) => {
     res.status(200).send(
-      `<HTML>
+        `<HTML>
         <body>
         <div>
           <label for="text">Enter your text: </label>
@@ -74,8 +73,8 @@ demoRouter.route('/')
         }
         </script>
       </body>`
-    )
-    next()
-  })
+    );
+    next();
+});
 
 module.exports = demoRouter;
