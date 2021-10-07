@@ -21,7 +21,8 @@ describe("Unit testing overlay route", function () {
             for ([requiredK, requiredV] of requiredArr) {
                 promiseArr.push(
                     new Promise(async (resolve, reject) => {
-                        const workingRequired = Object.entries(required).filter(([k, v], i) => {
+                        //delete required field one at a time
+                        const workingRequired = Object.entries(required).filter(([k]) => {
                             if (requiredK !== k) {
                                 return true;
                             }

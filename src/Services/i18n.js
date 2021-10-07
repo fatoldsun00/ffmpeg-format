@@ -1,12 +1,12 @@
 const i18n = require("i18n");
 const path = require("path");
-const {mode} = require("../config");
-const fs = require("fs");
+
 i18n.configure({
-    locales: ["fr"],
+    locales: ["fr", "en"],
     defaultLocale: "fr",
     directory: path.join(__dirname, "../../locales"),
     updateFiles: false,
+    queryParameter: "lang",
 });
 
 i18n.setLocale("fr");

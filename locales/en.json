@@ -1,4 +1,8 @@
 {
-	"ERR_RESOLUTION_REQUIRED": "ERR_RESOLUTION_REQUIRED",
-	"ERR_TIME_OUTSIDE_DURATION": "ERR_TIME_OUTSIDE_DURATION"
+    "ERR_TEXT_REQUIRED": "Text parameter is required",
+    "ERR_INPUTPATH_REQUIRED": "inputPath parameter is required",
+    "ERR_RESOLUTION_REQUIRED": "resolution parameter is required",
+    "ERR_DURATION_REQUIRED": "duration  parameter is required",
+    "ERR_TEXT_OUTSIDE_RESOLUTION": "Invalid X,Y coordinate",
+    "ERR_TIME_OUTSIDE_DURATION": "Invalid End Time"
 }

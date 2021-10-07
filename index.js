@@ -7,6 +7,7 @@ const formDataReader = multer();
 const {sDebugError, sendResError} = require("./src/Services/errorHandler");
 const {mode, corsAllowURL} = require("./src/config");
 const port = process.env.PORT || 8000;
+const i18n = require("i18n");
 
 app.use(express.urlencoded({extended: true}));
 app.use(formDataReader.array());
@@ -21,6 +22,9 @@ app.use(
         optionsSuccessStatus: 204,
     })
 );
+
+//locales
+app.use(i18n.init);
 
 //routes
 app.use("/api", require("./src/Routes/index"));
