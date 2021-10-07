@@ -2,8 +2,10 @@ const express = require("express");
 const overlayRouter = express.Router();
 const overlayController = require("../Controllers/overlayController");
 const AppError = require("../Services/AppError");
+const i18n = require("../Services/i18n");
 
 overlayRouter.use((req, res, next) => {
+    i18n.setLocale(req?.query?.lang || "fr");
     const {duration, resolution, inputPath} = req.body;
     //required value for all overlay routes
     if (!inputPath) {
