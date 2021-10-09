@@ -4,5 +4,5 @@
     "ERR_RESOLUTION_REQUIRED": "resolution parameter is required",
     "ERR_DURATION_REQUIRED": "duration  parameter is required",
     "ERR_TEXT_OUTSIDE_RESOLUTION": "Invalid X,Y coordinate",
-    "ERR_TIME_OUTSIDE_DURATION": "Invalid End Time"
+    "ERR_TIME_OUTSIDE_DURATION": "Invalid start or End Time"
 }
