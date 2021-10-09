@@ -1,5 +1,5 @@
 {
-    "ERR_TEXT_REQUIRED": "la parametre 'text' est requis",
+    "ERR_TEXT_REQUIRED": "le parametre 'text' est requis",
     "ERR_INPUTPATH_REQUIRED": "le parametre 'inputPath' est requis",
     "ERR_RESOLUTION_REQUIRED": "le parametre 'resolution' est requis",
     "ERR_DURATION_REQUIRED": "le parametre 'duration' est requis",

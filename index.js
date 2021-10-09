@@ -1,13 +1,14 @@
 const express = require("express");
-const app = express();
 const cors = require("cors");
 const morgan = require("morgan");
 const multer = require("multer");
-const formDataReader = multer();
 const {sDebugError, sendResError} = require("./src/Services/errorHandler");
 const {mode, corsAllowURL} = require("./src/config");
-const port = process.env.PORT || 8000;
 const i18n = require("i18n");
+
+const app = express();
+const formDataReader = multer();
+const port = process.env.PORT || 8000;
 
 app.use(express.urlencoded({extended: true}));
 app.use(formDataReader.array());
@@ -41,19 +42,13 @@ if (mode === "env") app.use(sDebugError);
 
 /**************** Uncaught execption fallback *****************/
 process.on("uncaughtException", function (err) {
-    console.error("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!uncaught exception:!!!!!!!!!!!!!!!!!!!!!!!!!!!", err.stack || err);
+    console.error("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!uncaught exception:!!!!!!!!!!!!!!!!!!!!!!!!!!!\n", err.stack || err);
 });
 
 /**************** exit signal *****************/
 process.on("SIGINT", async function () {
-    try {
-        //TODO
-    } catch (err) {
-        console.log("Erreur de fermeture \n", err);
-    } finally {
-        console.log("App exit");
-        process.exit();
-    }
+    console.log("App quit");
+    process.exit();
 });
 
 module.exports = app;
