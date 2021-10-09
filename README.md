@@ -42,12 +42,26 @@ node ./index.js
 Be careful of port used by web server, there are a trace into the console. The default port is 8000 but an .env file can override it.
 Demo page is accessible by [http://localhost:8000/demo](http://localhost:8000/demo)
 
-## Requete CURL
+## HTTP Request
 
 -   baseUrl: http://localhost:8000
 -   Endpoint: /api/overlay/text
 -   Method: POST
 -   Request content-type: application/x-www-form-urlencoded or multipart/form-data
+
+## CURL request example
+
+```
+curl --location --request POST 'http://localhost:8000/api/overlay/text?lang=en' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'text=toto' \
+--data-urlencode 'resolution=1930 x 1522' \
+--data-urlencode 'duration=60.00' \
+--data-urlencode 'startTime=60.00
+' \
+--data-urlencode 'endTime=20' \
+--data-urlencode 'inputPath=test_input1.mp4'
+```
 
 ## Change langage response
 
