@@ -51,7 +51,7 @@ Demo page is accessible by [http://localhost:8000/demo](http://localhost:8000/de
 
 ## Change langage response
 
-You can change langage response by and `?lang=en` queryString at the end URI
+You can change langage response by adding `?lang=en` queryString at the end URI
 
 ## Unit test
 
