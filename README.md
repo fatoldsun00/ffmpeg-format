@@ -58,8 +58,7 @@ curl --location --request POST 'http://localhost:8000/api/overlay/text?lang=en' 
 --data-urlencode 'text=toto' \
 --data-urlencode 'resolution=1930 x 1522' \
 --data-urlencode 'duration=60.00' \
---data-urlencode 'startTime=60.00
-' \
+--data-urlencode 'startTime=60.00' \
 --data-urlencode 'endTime=20' \
 --data-urlencode 'inputPath=test_input1.mp4'
 ```
