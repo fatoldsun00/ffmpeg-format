@@ -8,6 +8,7 @@ The web server translate parameter for ffmpeg overlay text feature into a CLI ff
 -   Binarie
 
 There are a binary for a standalone, destkop install, don't worries with node and dependacies installation
+Release is available at (https://github.com/fatoldsun00/ffmpeg-format/releases/tag/RC-v1.0.0)[https://github.com/fatoldsun00/ffmpeg-format/releases/tag/RC-v1.0.0]
 
 -   Source
 
