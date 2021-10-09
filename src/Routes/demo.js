@@ -57,8 +57,7 @@ demoRouter.route("/").get((req, res, next) => {
           formData.append('endTime',document.querySelector('#endTime').value || parseFloat(document.querySelector('#duration').value))
           formData.append('inputPath','input_demo.mpeg')
           formData.append('outputPath','output_demo.mpeg')
-          console.log(formData)
-          const result = await fetch("/api/overlay/text", {
+          const result = await fetch("/api/overlay/text?lang=en", {
             method: "POST",
             body: formData
           })
