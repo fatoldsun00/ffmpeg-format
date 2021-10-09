@@ -7,7 +7,7 @@ The web server translate parameter for ffmpeg overlay text feature into a CLI ff
 
 -   Binarie
 
-There are a binary for a standalone, destkop install, don't worries with node and dependacies installation
+There are a binary for a standalone, destkop install, don't worries with node and dependencies installation.
 Release is available [here](https://github.com/fatoldsun00/ffmpeg-format/releases/tag/RC-v1.0.0)
 
 -   Source
@@ -74,4 +74,4 @@ For launch unit test `npm test`
 
 ## Package app
 
-For create dist `pkg .` make a standalone binary and write thenm into /dist directory
+For create dist `pkg .` make a standalone binary and write them into /dist directory
